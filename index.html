@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    class bank{
+        input(){
+            this.name=parseInt(prompt("Enter the name of account holder"));
+            this.accountno=parseInt(prompt("Account no."));
+            this.balance=parseInt(prompt("Enter the balance"));          
+        }
+        deposit(){
+            this.deposit1=parseInt(prompt("Enter the amount to be depositted"));
+        
+            this.balance=this.balance+this.deposit1;
+        }
+        withdraw(){
+            this.withdraw1=parseInt(prompt("Enter the withdrawl amount"));   
+            this.balance=this.balance-this.withdraw1;
+            if(this.balance<1000){
+                alert("Insufficient balance");
+                this.balance=this.balance+this.withdraw1;
+            }
+        }
+        result(){
+            document.write("The current balance is :"+this.balance);
+        }
+    }
+    var x= new bank();
+    x.input();
+    x.withdraw();
+    
+    x.deposit();
+    
+    x.withdraw();
+    
+    x.deposit();
+    
+    x.result();
+</script>
+<body>
+    
+</body>
+</html>
